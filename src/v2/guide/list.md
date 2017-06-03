@@ -326,6 +326,9 @@ new Vue({
   },
   methods: {
     addNewTodo: function () {
+      if(!this.newTodoText || !this.newTodoText.trim()){
+        return;
+      }
       this.todos.push(this.newTodoText)
       this.newTodoText = ''
     }
